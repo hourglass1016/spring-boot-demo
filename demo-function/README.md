@@ -150,3 +150,4 @@ public interface Function<T, R> {
 }
 ```
 完结，撒花✿✿ヽ(°▽°)ノ✿
+> 引用：https://mp.weixin.qq.com/s/lepLieM24kgCyrIxl7eHdg
