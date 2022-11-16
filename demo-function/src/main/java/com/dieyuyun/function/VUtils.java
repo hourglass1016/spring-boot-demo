@@ -7,14 +7,14 @@ package com.dieyuyun.function;
 public class VUtils {
 
     /**
-     *  如果参数为true抛出异常
+     * 如果参数为true抛出异常
      *
      * @param b
      * @return ThrowExceptionFunction
      **/
-    public static ThrowExceptionFunction isTure(boolean b){
+    public static ThrowExceptionFunction isTure(boolean b) {
         return (errorMessage) -> {
-            if (b){
+            if (b) {
                 throw new RuntimeException(errorMessage);
             }
         };
@@ -26,7 +26,7 @@ public class VUtils {
      * @param b
      * @return BranchHandle
      **/
-    public static BranchHandle isTureOrFalse(boolean b){
+    public static BranchHandle isTureOrFalse(boolean b) {
         return (trueHandle, falseHandle) -> {
             if (b) {
                 trueHandle.run();
@@ -42,9 +42,9 @@ public class VUtils {
      * @param str
      * @return BranchHandle
      **/
-    public static PresentOrElseHandler<?> isBlankOrNoBlank(String str){
+    public static PresentOrElseHandler<?> isBlankOrNoBlank(String str) {
         return (consumer, runnable) -> {
-            if (str == null || str.length() == 0){
+            if (str == null || str.length() == 0) {
                 runnable.run();
             } else {
                 consumer.accept(str);
